@@ -30,7 +30,7 @@ public class ServiceFragment extends Fragment{
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        indexAnInt = getArguments().getInt("Index");
+        indexAnInt = getArguments().getInt("Index", 0);
 
 //        Show title
         showTitle();
@@ -46,7 +46,7 @@ public class ServiceFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_service, container, false);
+        View view = inflater.inflate(R.layout.fragment_service, container, false);
         return view;
     }
 } //MAINCLASS
